@@ -1,8 +1,16 @@
 import React from "react";
-import "./App.css";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Container>
+        <Header />
+        <AddTodo />
+        <TodoList />
+        <Footer />
+      </Container>
+    </div>
+  );
 }
 
 export default App;
