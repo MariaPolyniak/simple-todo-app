@@ -1,13 +1,15 @@
 import React from "react";
+import Container from "./Container";
 
 function App() {
   return (
     <div className="App">
       <Container>
-        <Header />
+        container
+        {/* <Header />
         <AddTodo />
         <TodoList />
-        <Footer />
+        <Footer /> */}
       </Container>
     </div>
   );
