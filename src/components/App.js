@@ -9,6 +9,7 @@ import Footer from "./Footer";
 const createTodo = (title) => ({
   id: createId(),
   title,
+  done: false,
 });
 
 function App() {
@@ -22,12 +23,27 @@ function App() {
     setTodos(todos.filter((todo) => todo.id !== id));
   }
 
+  function toggleStatus(id) {
+    setTodos(
+      todos.map((todo) => {
+        if (todo.id === id) {
+          return { ...todo, done: !todo.done };
+        }
+        return todo;
+      })
+    );
+  }
+
   return (
     <div className="App">
       <Container>
         <Header />
         <AddTodo onAddTodo={addTodo} />
-        <TodoList todos={todos} onRemoveTodo={removeTodo} />
+        <TodoList
+          todos={todos}
+          onRemoveTodo={removeTodo}
+          onToggleStatus={toggleStatus}
+        />
         <Footer />
       </Container>
     </div>
