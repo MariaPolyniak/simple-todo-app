@@ -6,22 +6,21 @@ import TodoList from "./TodoList";
 import Footer from "./Footer";
 
 function App() {
-  const myTodos = [
+  const [todos, setTodos] = useState([
     { title: "Написати додаток", id: 1 },
     { title: "Піти гуляти", id: 2 },
     { title: "Піти в магазин", id: 3 },
-  ];
-  const [todos, setTodos] = useState(myTodos);
+  ]);
 
-  function addTodo() {
-    console.log();
+  function addTodo(todo) {
+    setTodos([...todos, todo]);
   }
 
   return (
     <div className="App">
       <Container>
         <Header />
-        <AddTodo todos={todos} toggleTodo={addTodo} />
+        <AddTodo onAddTodo={addTodo} />
         <TodoList todos={todos} />
         <Footer />
       </Container>

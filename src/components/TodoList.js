@@ -4,8 +4,8 @@ import TodoItem from "./TodoItem";
 function TodoList(props) {
   return (
     <div className="TodoList">
-      {props.todos.map((todo) => (
-        <TodoItem todo={todo} />
+      {props.todos.map((todo, idx) => (
+        <TodoItem todo={todo} index={idx} />
       ))}
     </div>
   );
