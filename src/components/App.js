@@ -1,23 +1,21 @@
 import React, { useState } from "react";
+import { createId } from "../utils/id";
 import Container from "./Container";
 import Header from "./Header";
 import AddTodo from "./AddTodo";
 import TodoList from "./TodoList";
 import Footer from "./Footer";
 
+const createTodo = (title) => ({
+  id: createId(),
+  title,
+});
+
 function App() {
-  const [todos, setTodos] = useState([
-    { title: "Написати додаток", id: 1 },
-    { title: "Піти гуляти", id: 2 },
-    { title: "Піти в магазин", id: 3 },
-  ]);
+  const [todos, setTodos] = useState([]);
 
   function addTodo(title) {
-    const todo = {
-      title,
-    };
-
-    setTodos([...todos, todo]);
+    setTodos([...todos, createTodo(title)]);
   }
 
   function removeTodo(id) {
