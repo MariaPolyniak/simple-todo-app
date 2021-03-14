@@ -8,7 +8,7 @@ function AddTodo(props) {
   }
 
   function addTodo() {
-    props.onAddTodo({ title: value });
+    props.onAddTodo(value);
     setValue("");
   }
 

@@ -1,11 +1,11 @@
 import React from "react";
 
-function TodoItem(props) {
+function TodoItem({ index, todo, onRemoveTodo }) {
   return (
     <div>
-      <span>{props.index + 1}</span>
-      {props.todo.title}
-      <button>
+      <span>{index + 1}</span>
+      {todo.title}
+      <button onClick={() => onRemoveTodo(todo.id)}>
         <img src="/assets/close.png" alt="close" width="10px" />
       </button>
     </div>
