@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 
-function AddTodo() {
+function AddTodo(props) {
+  const [value, setValue] = useState("");
+
+  function addValue(e) {
+    setValue(e.target.value);
+  }
+
   return (
     <div>
-      <input type="text"></input>
-      <button>Add</button>
+      <input type="text" value={value} onChange={addValue}></input>
+      <button onClick={props.toggleTodo}>Add</button>
     </div>
   );
 }
