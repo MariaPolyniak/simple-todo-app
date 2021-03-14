@@ -25,12 +25,9 @@ function App() {
 
   function toggleStatus(id) {
     setTodos(
-      todos.map((todo) => {
-        if (todo.id === id) {
-          return { ...todo, done: !todo.done };
-        }
-        return todo;
-      })
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, done: !todo.done } : todo
+      )
     );
   }
 
@@ -39,11 +36,18 @@ function App() {
       <Container>
         <Header />
         <AddTodo onAddTodo={addTodo} />
-        <TodoList
-          todos={todos}
-          onRemoveTodo={removeTodo}
-          onToggleStatus={toggleStatus}
-        />
+        {todos.length ? (
+          <TodoList
+            todos={todos}
+            onRemoveTodo={removeTodo}
+            onToggleStatus={toggleStatus}
+          />
+        ) : (
+          <div>
+            <img src="/assets/spaceman.jpg" alt="let's go" />
+            <p>It looks like you don't have any todos!</p>
+          </div>
+        )}
         <Footer />
       </Container>
     </div>
