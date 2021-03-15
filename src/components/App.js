@@ -16,6 +16,9 @@ function App() {
   const [todos, setTodos] = useState([]);
 
   function addTodo(title) {
+    if (title.trim() === "") {
+      return;
+    }
     setTodos([...todos, createTodo(title)]);
   }
 
@@ -34,7 +37,7 @@ function App() {
   return (
     <div className="App">
       <Container>
-        <Header />
+        <Header todos={todos} />
         <AddTodo onAddTodo={addTodo} />
         {todos.length ? (
           <TodoList

@@ -8,6 +8,7 @@ function TodoList({ todos, onRemoveTodo, onToggleStatus }) {
       <TransitionGroup>
         {todos.map((todo, index) => (
           <CSSTransition
+            appear={true}
             key={todo.id}
             timeout={500}
             classNames="item"

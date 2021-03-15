@@ -1,5 +1,10 @@
 @import-normalize;
 
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .App {
   background: linear-gradient(to right, #f09819, #ff512f);
   height: 100vh;
@@ -52,21 +57,43 @@
   background-color: #edeef7;
 }
 
-.item-enter {
-  opacity: 0;
-  transform: translateX(-100%);
-}
-.item-enter-active {
-  opacity: 1;
-  transition: opacity 500ms, transform 500ms;
-  transform: translateX(0%);
-}
-.item-exit {
-  opacity: 1;
-  transform: translateX(0%);
-}
-.item-exit-active {
-  opacity: 0;
-  transition: opacity 500ms, transform 500ms;
-  transform: translateX(100%);
+.item {
+  &-appear {
+    opacity: 0;
+    transform: translateX(-100%);
+
+    &-active {
+      opacity: 1;
+      transition: opacity 500ms, transform 500ms;
+      transform: translateX(0%);
+    }
+  }
+
+  &-enter {
+    opacity: 0;
+    transform: translateX(-100%);
+
+    &-active {
+      opacity: 1;
+      transition: opacity 500ms, transform 500ms;
+      transform: translateX(0%);
+    }
+  }
+
+  &-active {
+    opacity: 1;
+    transition: opacity 500ms, transform 500ms;
+    transform: translateX(0%);
+  }
+
+  &-exit {
+    opacity: 1;
+    transform: translateX(0%);
+
+    &-active {
+      opacity: 0;
+      transition: opacity 500ms, transform 500ms;
+      transform: translateX(100%);
+    }
+  }
 }
