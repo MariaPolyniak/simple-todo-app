@@ -3,7 +3,7 @@ import React from "react";
 function TodoItem({ index, todo, onRemoveTodo, onStatusChange }) {
   return (
     <div className="TodoItem">
-      <label class="checkbox path">
+      <label className="checkbox path">
         <input
           className="TodoItem__check"
           type="checkbox"

@@ -21,7 +21,7 @@ body {
 .Container {
   background-color: #f9f3f3;
   width: 60%;
-  height: 70%;
+  height: auto;
   border-radius: 5px;
   box-shadow: 15px 14px 20px rgba(0, 0, 0, 0.4);
   overflow: hidden;
@@ -188,4 +188,12 @@ body {
 
 .Footer {
   background-color: #edeef7;
+  margin-top: 20px;
+
+  &__text {
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
 }
