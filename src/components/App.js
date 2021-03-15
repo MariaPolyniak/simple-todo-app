@@ -4,6 +4,7 @@ import Container from "./Container";
 import Header from "./Header";
 import AddTodo from "./AddTodo";
 import TodoList from "./TodoList";
+import Picture from "./Picture";
 import Footer from "./Footer";
 
 const createTodo = (title) => ({
@@ -46,14 +47,7 @@ function App() {
             onToggleStatus={toggleStatus}
           />
         ) : (
-          <div>
-            <img
-              src="/assets/spaceman.jpg"
-              alt="let's go"
-              className="spaceman"
-            />
-            <p>It looks like you don't have any todos!</p>
-          </div>
+          <Picture />
         )}
         <Footer />
       </Container>
