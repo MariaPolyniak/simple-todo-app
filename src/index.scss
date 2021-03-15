@@ -1,4 +1,5 @@
 @import-normalize;
+@import "./checkbox.scss";
 
 html {
   font-family: "Roboto", sans-serif;
@@ -23,6 +24,7 @@ body {
   height: 70%;
   border-radius: 5px;
   box-shadow: 15px 14px 20px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
 }
 
 .Header {
@@ -93,6 +95,7 @@ body {
     border-radius: 10px;
     outline: none;
     box-shadow: 9px 6px 10px 0px rgba(#a6a9b6, 0.6);
+    cursor: pointer;
   }
 }
 
@@ -101,8 +104,45 @@ body {
   width: 350px;
 }
 
-.Footer {
-  background-color: #edeef7;
+.TodoList {
+  margin: 0 30px;
+}
+
+.TodoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #96c5fd;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+
+  &__check {
+    margin-right: 10px;
+  }
+
+  &__number {
+    margin-right: 10px;
+  }
+
+  &__text {
+    flex-grow: 1;
+    margin-right: 10px;
+    letter-spacing: 2px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f92323;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
 }
 
 .item {
@@ -144,4 +184,8 @@ body {
       transform: translateX(100%);
     }
   }
+}
+
+.Footer {
+  background-color: #edeef7;
 }
