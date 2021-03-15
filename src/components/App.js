@@ -44,7 +44,11 @@ function App() {
           />
         ) : (
           <div>
-            <img src="/assets/spaceman.jpg" alt="let's go" />
+            <img
+              src="/assets/spaceman.jpg"
+              alt="let's go"
+              className="spaceman"
+            />
             <p>It looks like you don't have any todos!</p>
           </div>
         )}

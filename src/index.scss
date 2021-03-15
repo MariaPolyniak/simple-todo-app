@@ -1,0 +1,58 @@
+@import-normalize;
+
+// body {
+//   // margin: 0;
+//   box-sizing: border-box;
+// }
+
+.App {
+  background: linear-gradient(to right, #f09819, #ff512f);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Container {
+  background-color: #f9f3f3;
+  width: 60%;
+  height: 70%;
+  border-radius: 5px;
+  box-shadow: 15px 14px 20px rgba(0, 0, 0, 0.4);
+}
+
+.Header {
+  background-color: #edeef7;
+}
+
+.AddTodo {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: space-between;
+
+  .todoInput {
+    outline: none;
+    border: solid 2px #edeef7;
+    background-color: #f9f3f3;
+    flex-grow: 1;
+    height: 30px;
+  }
+
+  .todoBtn {
+    border: none;
+    background-color: #96c5fd;
+    padding: 10px;
+    height: 35px;
+    border-radius: 5px;
+  }
+}
+
+.spaceman {
+  border-radius: 50%;
+  width: 350px;
+}
+
+.Footer {
+  background-color: #edeef7;
+}

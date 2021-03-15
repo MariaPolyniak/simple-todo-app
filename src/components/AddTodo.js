@@ -13,9 +13,17 @@ function AddTodo(props) {
   }
 
   return (
-    <div>
-      <input type="text" value={value} onChange={addValue}></input>
-      <button onClick={addTodo}>Add</button>
+    <div className="AddTodo">
+      <input
+        className="todoInput"
+        type="text"
+        placeholder="Enter your todo"
+        value={value}
+        onChange={addValue}
+      ></input>
+      <button className="todoBtn" onClick={addTodo}>
+        <img src="/assets/rocket.png" alt="rocket" height="30px" />
+      </button>
     </div>
   );
 }
