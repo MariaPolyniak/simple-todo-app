@@ -15,13 +15,13 @@ function AddTodo(props) {
   return (
     <div className="AddTodo">
       <input
-        className="todoInput"
+        className="AddTodo__input"
         type="text"
         placeholder="Enter your todo"
         value={value}
         onChange={addValue}
       ></input>
-      <button className="todoBtn" onClick={addTodo}>
+      <button className="AddTodo__btn" onClick={addTodo}>
         <img src="/assets/rocket.png" alt="rocket" height="30px" />
       </button>
     </div>

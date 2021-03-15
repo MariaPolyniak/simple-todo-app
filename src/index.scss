@@ -67,23 +67,32 @@ body {
 .AddTodo {
   display: flex;
   width: 80%;
-  margin: auto;
-  justify-content: space-between;
+  margin: 20px auto;
 
-  .todoInput {
+  &__input {
     outline: none;
     border: solid 2px #edeef7;
+    border-radius: 10px;
     background-color: #f9f3f3;
     flex-grow: 1;
-    height: 30px;
+    height: 45px;
+    letter-spacing: 2px;
+
+    &::placeholder {
+      color: #96c5fd;
+      letter-spacing: 2px;
+    }
   }
 
-  .todoBtn {
+  &__btn {
     border: none;
     background-color: #96c5fd;
+    margin-left: 20px;
     padding: 10px;
-    height: 35px;
-    border-radius: 5px;
+    height: 45px;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 9px 6px 10px 0px rgba(#a6a9b6, 0.6);
   }
 }
 
