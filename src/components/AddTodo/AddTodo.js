@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./AddTodo.scss";
 
 function AddTodo(props) {
   const [value, setValue] = useState("");

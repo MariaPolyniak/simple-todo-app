@@ -1,0 +1,18 @@
+.Badge {
+  position: relative;
+
+  .Badge__content {
+    position: absolute;
+    top: -12%;
+    left: 95%;
+    background-color: #f92323;
+    color: white;
+    width: 20px;
+    height: 20px;
+    font-size: calc(1rem * 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+}

@@ -1,6 +1,8 @@
 import React from "react";
-import Badge from "./Badge";
-import { getFormattedDate } from "../utils/date";
+import Badge from "../Badge/Badge";
+import { getFormattedDate } from "../../utils/date";
+
+import "./Header.scss";
 
 function Header({ todos }) {
   return (

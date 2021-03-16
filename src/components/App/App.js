@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { createId } from "../utils/id";
-import Container from "./Container";
-import Header from "./Header";
-import AddTodo from "./AddTodo";
-import TodoList from "./TodoList";
-import Picture from "./Picture";
-import Footer from "./Footer";
+import { createId } from "../../utils/id";
+import Container from "../Container/Container";
+import Header from "../Header/Header";
+import AddTodo from "../AddTodo/AddTodo";
+import TodoList from "../TodoList/TodoList";
+import Picture from "../Picture/Picture";
+import Footer from "../Footer/Footer";
+
+import "./App.scss";
 
 const storage = {
   setItem(key, value) {

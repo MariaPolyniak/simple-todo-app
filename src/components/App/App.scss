@@ -1,0 +1,10 @@
+.App {
+  background: linear-gradient(to right, #f09819, #ff512f);
+  height: 100vh;
+
+  @media all and (min-width: 355px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

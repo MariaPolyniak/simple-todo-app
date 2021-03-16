@@ -1,4 +1,5 @@
 import React from "react";
+import "./TodoItem.scss";
 
 function TodoItem({ index, todo, onRemoveTodo, onStatusChange }) {
   return (

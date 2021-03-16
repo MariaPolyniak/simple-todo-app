@@ -1,6 +1,8 @@
 import React from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import TodoItem from "./TodoItem";
+import TodoItem from "../TodoItem/TodoItem";
+
+import "./TodoList.scss";
 
 function TodoList({ todos, onRemoveTodo, onToggleStatus }) {
   return (

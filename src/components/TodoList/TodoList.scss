@@ -1,0 +1,23 @@
+.TodoList {
+  margin: 0 30px;
+  padding: 0 5px;
+  max-height: 265px;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    background-color: #edeef7;
+    border-radius: 5px;
+    width: 8px;
+
+    &-thumb {
+      border-radius: 5px;
+      background-image: linear-gradient(to bottom, #f09819, #ff512f);
+    }
+  }
+
+  @media all and (max-width: 375px) {
+    max-height: none;
+    flex: 1;
+  }
+}
