@@ -1,19 +1,21 @@
+@import "../../sassStyles/_variables.scss";
+
 .Header {
-  background-color: #edeef7;
+  background-color: $bg-color;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   &__date {
-    letter-spacing: 2px;
+    letter-spacing: $normal-letter-spacing;
   }
 
   &__text {
     text-transform: uppercase;
-    letter-spacing: 4px;
-    font-size: 24px;
-    font-weight: 800;
-    color: #fa6b27;
+    letter-spacing: $large-letter-spacing;
+    font-size: $main-text;
+    font-weight: $bold-text;
+    color: $main-text-color;
     margin: 10px;
   }
 }

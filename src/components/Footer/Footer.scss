@@ -1,11 +1,13 @@
+@import "../../sassStyles/_variables.scss";
+
 .Footer {
-  background-color: #edeef7;
+  background-color: $bg-color;
   margin-top: 20px;
 
   &__text {
     margin: 0;
     padding: 20px;
     text-align: center;
-    letter-spacing: 2px;
+    letter-spacing: $normal-letter-spacing;
   }
 }

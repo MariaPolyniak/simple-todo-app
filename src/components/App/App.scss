@@ -1,8 +1,10 @@
+@import "../../sassStyles/_variables.scss";
+
 .App {
-  background: linear-gradient(to right, #f09819, #ff512f);
+  background: $gradient-color;
   height: 100vh;
 
-  @media all and (min-width: 355px) {
+  @media all and (min-width: $mobile-s-width) {
     display: flex;
     justify-content: center;
     align-items: center;

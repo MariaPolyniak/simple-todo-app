@@ -1,8 +1,10 @@
+@import "../../sassStyles/_variables.scss";
+
 .Container {
-  background-color: #f9f3f3;
+  background-color: $main-bg-color;
   width: 50%;
   height: auto;
-  border-radius: 5px;
+  border-radius: $rounded-shape;
   box-shadow: 15px 14px 20px rgba(0, 0, 0, 0.4);
   overflow: hidden;
   max-height: 80%;

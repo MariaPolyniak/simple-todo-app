@@ -1,0 +1,25 @@
+@mixin scrollbarY($bg-color, $scrollY-gradient-color) {
+  &::-webkit-scrollbar {
+    background-color: $bg-color;
+    border-radius: 5px;
+    width: 7px;
+
+    &-thumb {
+      border-radius: 5px;
+      background-image: $scrollY-gradient-color;
+    }
+  }
+}
+
+@mixin scrollbarX($bg-color, $scrollX-gradient-color) {
+  &::-webkit-scrollbar {
+    background-color: $bg-color;
+    border-radius: 5px;
+    height: 7px;
+
+    &-thumb {
+      border-radius: 5px;
+      background-image: $scrollX-gradient-color;
+    }
+  }
+}

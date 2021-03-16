@@ -1,22 +1,24 @@
+@import "../../sassStyles/_variables.scss";
+
 .Picture {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   &__spaceman {
-    border-radius: 50%;
+    border-radius: $round-shape;
     box-shadow: 9px 6px 10px 0px rgba(#a6a9b6, 0.6);
   }
 
   &__text {
     margin-top: 30px;
     margin-bottom: 0;
-    letter-spacing: 2px;
-    font-weight: 500;
-    color: #fa6b27;
+    letter-spacing: $normal-letter-spacing;
+    font-weight: $normal-text;
+    color: $main-text-color;
   }
 
-  @media all and (max-width: 375px) {
+  @media all and (max-width: $mobile-m-width) {
     flex: 1;
     text-align: center;
   }
