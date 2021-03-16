@@ -27,7 +27,7 @@
     flex-grow: 1;
     margin-right: 10px;
     letter-spacing: $normal-letter-spacing;
-    overflow: auto;
+    overflow-x: auto;
 
     @include scrollbarX($bg-color, $scrollX-gradient-color);
   }
