@@ -25,6 +25,7 @@ body {
   border-radius: 5px;
   box-shadow: 15px 14px 20px rgba(0, 0, 0, 0.4);
   overflow: hidden;
+  max-height: 80%;
 
   @media all and (max-width: 768px) {
     width: 90%;
@@ -111,7 +112,6 @@ body {
 
   &__spaceman {
     border-radius: 50%;
-    width: 200px;
     box-shadow: 9px 6px 10px 0px rgba(#a6a9b6, 0.6);
   }
 
@@ -126,6 +126,21 @@ body {
 
 .TodoList {
   margin: 0 30px;
+  padding: 0 5px;
+  max-height: 265px;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    background-color: #edeef7;
+    border-radius: 5px;
+    width: 10px;
+
+    &-thumb {
+      border-radius: 5px;
+      background-image: linear-gradient(to bottom, #f09819, #ff512f);
+    }
+  }
 }
 
 .TodoItem {

@@ -5,7 +5,7 @@ import TodoItem from "./TodoItem";
 function TodoList({ todos, onRemoveTodo, onToggleStatus }) {
   return (
     <div className="TodoList">
-      <TransitionGroup>
+      <TransitionGroup component={null}>
         {todos.map((todo, index) => (
           <CSSTransition
             appear={true}
