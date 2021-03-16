@@ -20,11 +20,15 @@ body {
 
 .Container {
   background-color: #f9f3f3;
-  width: 60%;
+  width: 50%;
   height: auto;
   border-radius: 5px;
   box-shadow: 15px 14px 20px rgba(0, 0, 0, 0.4);
   overflow: hidden;
+
+  @media all and (max-width: 768px) {
+    width: 90%;
+  }
 }
 
 .Header {
@@ -72,6 +76,7 @@ body {
   margin: 20px auto;
 
   &__input {
+    padding: 0 10px;
     outline: none;
     border: solid 2px #edeef7;
     border-radius: 10px;

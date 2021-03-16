@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { createId } from "../utils/id";
 import Container from "./Container";
 import Header from "./Header";
@@ -7,6 +7,20 @@ import TodoList from "./TodoList";
 import Picture from "./Picture";
 import Footer from "./Footer";
 
+const storage = {
+  setItem(key, value) {
+    localStorage.setItem(key, JSON.stringify(value));
+  },
+  getItem(key) {
+    const item = localStorage.getItem(key);
+    try {
+      return JSON.parse(item);
+    } catch (e) {
+      return null;
+    }
+  },
+};
+
 const createTodo = (title) => ({
   id: createId(),
   title,
@@ -14,7 +28,11 @@ const createTodo = (title) => ({
 });
 
 function App() {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(storage.getItem("todos") || []);
+
+  useEffect(() => {
+    storage.setItem("todos", todos);
+  }, [todos]);
 
   function addTodo(title) {
     if (title.trim() === "") {
