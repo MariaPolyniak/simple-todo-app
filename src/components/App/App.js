@@ -1,27 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { createId } from "../../utils/id";
+import { storage } from "../../utils/storage";
 import Container from "../Container/Container";
 import Header from "../Header/Header";
 import AddTodo from "../AddTodo/AddTodo";
 import TodoList from "../TodoList/TodoList";
-import Picture from "../Picture/Picture";
+import EmptyList from "../EmptyList/EmptyList";
 import Footer from "../Footer/Footer";
 
 import "./App.scss";
-
-const storage = {
-  setItem(key, value) {
-    localStorage.setItem(key, JSON.stringify(value));
-  },
-  getItem(key) {
-    const item = localStorage.getItem(key);
-    try {
-      return JSON.parse(item);
-    } catch (e) {
-      return null;
-    }
-  },
-};
 
 const createTodo = (title) => ({
   id: createId(),
@@ -67,7 +54,7 @@ function App() {
             onToggleStatus={toggleStatus}
           />
         ) : (
-          <Picture />
+          <EmptyList />
         )}
         <Footer />
       </Container>

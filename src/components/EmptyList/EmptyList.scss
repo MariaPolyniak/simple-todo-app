@@ -1,11 +1,11 @@
-@import "../../sassStyles/_variables.scss";
+@import "../../styles/variables";
 
-.Picture {
+.EmptyList {
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  &__spaceman {
+  &__img {
     border-radius: $round-shape;
     box-shadow: 9px 6px 10px 0px rgba(#a6a9b6, 0.6);
   }
