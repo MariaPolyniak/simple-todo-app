@@ -1,12 +1,13 @@
 import React from "react";
 import "./EmptyList.scss";
+import spacemanImg from "./spaceman.jpg";
 
 function EmptyList() {
   return (
     <div className="EmptyList">
       <img
         className="EmptyList__img"
-        src="/assets/spaceman.jpg"
+        src={spacemanImg}
         alt="let's go"
         width="200px"
         height="200px"

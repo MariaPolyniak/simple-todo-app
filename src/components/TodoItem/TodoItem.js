@@ -1,5 +1,6 @@
 import React from "react";
 import "./TodoItem.scss";
+import closeImg from "./close.svg";
 
 function TodoItem({ index, todo, onRemoveTodo, onStatusChange }) {
   return (
@@ -22,7 +23,7 @@ function TodoItem({ index, todo, onRemoveTodo, onStatusChange }) {
         {todo.title}
       </span>
       <button className="TodoItem__btn" onClick={() => onRemoveTodo(todo.id)}>
-        <img src="/assets/close.svg" alt="close" />
+        <img src={closeImg} alt="close" />
       </button>
     </div>
   );

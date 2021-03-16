@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./AddTodo.scss";
+import rocketImg from "./rocket.png";
 
 function AddTodo(props) {
   const [value, setValue] = useState("");
@@ -23,7 +24,7 @@ function AddTodo(props) {
         onChange={addValue}
       ></input>
       <button className="AddTodo__btn" onClick={addTodo}>
-        <img src="/assets/rocket.png" alt="rocket" height="30px" />
+        <img src={rocketImg} alt="rocket" height="30px" />
       </button>
     </div>
   );
