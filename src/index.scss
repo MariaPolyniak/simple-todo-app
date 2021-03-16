@@ -13,9 +13,12 @@ body {
 .App {
   background: linear-gradient(to right, #f09819, #ff512f);
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  @media all and (min-width: 355px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .Container {
@@ -29,6 +32,16 @@ body {
 
   @media all and (max-width: 768px) {
     width: 90%;
+  }
+
+  @media all and (max-width: 375px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    width: 100%;
+    height: 100vh;
+    max-height: none;
+    border-radius: 0;
   }
 }
 
@@ -122,6 +135,11 @@ body {
     font-weight: 500;
     color: #fa6b27;
   }
+
+  @media all and (max-width: 375px) {
+    flex: 1;
+    text-align: center;
+  }
 }
 
 .TodoList {
@@ -140,6 +158,11 @@ body {
       border-radius: 5px;
       background-image: linear-gradient(to bottom, #f09819, #ff512f);
     }
+  }
+
+  @media all and (max-width: 375px) {
+    max-height: none;
+    flex: 1;
   }
 }
 
