@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .AddTodo {
   display: flex;
   width: 80%;
@@ -8,7 +10,7 @@
     outline: none;
     border: solid 2px #edeef7;
     border-radius: 10px;
-    background-color: #f9f3f3;
+    background-color: $main-bg-color;
     flex-grow: 1;
     height: 45px;
     letter-spacing: 2px;
